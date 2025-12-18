@@ -1,4 +1,4 @@
-# Source Code Module Description
+A MULTI-STAGE RECONSTRUCTION-BASED MEMBERSHIP INFERENCE ATTACK VIA TEMPORAL FEATURE MODELING
 
 This directory contains all the core code files for the multi-stage reconstruction attack system.
 
