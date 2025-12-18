@@ -3,8 +3,7 @@ A MULTI-STAGE RECONSTRUCTION-BASED MEMBERSHIP INFERENCE ATTACK VIA TEMPORAL FEAT
 This directory contains all the core code files for the multi-stage reconstruction attack system.
 
 ### Pseudocode for this Experiment
-./Pseudocode.pdf
-
+Pseudocode.jpg
 ## 📁 File List
 
 ### 🎯 Core Attack Module
