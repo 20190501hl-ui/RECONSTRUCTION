@@ -3,48 +3,7 @@
 This directory contains all the core code files for the multi-stage reconstruction attack system.
 
 ### Pseudocode for this Experiment
-```text
-Algorithm 1 Multi-stage Reconstruction-based Membership Inference Attack
-
-Input:
-  Private dataset Di for each client, 
-  Initialized model ω, 
-  Teacher model T,
-  Number of clients N, 
-  Global rounds T
-
-Output:
-  Robust global model.
-
-for t = 1, 2, ..., T do
-    for i = 1, ..., N in parallel do
-        Send global model ω' to local client i
-        ω' ← LocalUpdate(ω')
-    end for
-    L(ω) ← Σi∈[N] Di Σi∈[N] Di Li(ω')   (1)
-end for
-
-LocalUpdate(ω') 
-for each local epoch do
-    for each batch (xi, yi) of Di do
-        /* Adversarial examples generation */
-        xadv i ← xi + δ (2)
-        /* Clean examples augmentation */
-        xij ← λxi + (1 - λ)xj (3)
-        /* Adversarial examples augmentation */
-        xadv i ← xij + λ (1 - λ) xadv i (4)
-        /* Vanilla mixture knowledge distillation */
-        L VKD ← KL(ziij, zijadv) + KL(ziij, zisj) (5)
-        /* Adversarial mixture knowledge distillation */
-        L AKD ← KL(ziadv, zisadv) + KL(zijadv, zisadv) (6)
-        /* Consistency regularization */
-        L ALG ← λadv ||zsq - zgq||^2 (7)
-        /* Overall local objective for each client */
-        L ← α L VKD + (1 - α) L AKD + λ L ALG (8)
-    end for
-end for
-
-return ωi
+./Pseudocode.pdf
 
 ## 📁 File List
 
