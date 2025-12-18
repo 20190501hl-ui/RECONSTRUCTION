@@ -3,6 +3,7 @@
 This directory contains all the core code files for the multi-stage reconstruction attack system.
 
 ### Pseudocode for this Experiment
+```text
 Algorithm 1 Multi-stage Reconstruction-based Membership Inference Attack
 
 Input:
